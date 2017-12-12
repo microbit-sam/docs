@@ -5,7 +5,7 @@ The device's flash layout can be read using the Memory Map Characteristic. This 
 This allows the client to understand the flash regions and compare them with a new firmware HEX file. If the SD and DAL hashes are identical between the micro:bits current firmware and the new firmware partial flashing is possible and the phone begins to send flash data. Each packet of data contains 16 bytes of information plus the offset that it needs to be written to. If the hashes didn't match a full flash occurs.
 
 ## Memory Map Characteristic
-### UUID: 0xe9,0x7d,0x3b,0x10,0x25,0x1d,0x47,0x0a,0xa0,0x62,0xfa,0x19,0x22,0xdf,0xa9,0xa8
+### UUID: e97d3b10-251d-470a-a062-fa1922dfa9a8
 When the micro:bit powers on the Memory Map characteristic is initialised to return the names of the different flash regions. Each region has a 3 character name so that 6 regions (18 bytes) can be represented in one 20 byte BLE read response.
 
 ### Initial State
@@ -49,7 +49,7 @@ The Region Information is returned in two packets, the first containing the star
 | 19 |  Packet #: 0x01 |
 
 ## Flash Characteristic
-### UUID: 0xe9,0x7f,0xaa,0x6d,0x25,0x1d,0x47,0x0a,0xa0,0x62,0xfa,0x19,0x22,0xdf,0xa9,0xa8
+### UUID: e97faa6d-251d-470a-a062-fa1922dfa9a8
 The flash charateristic allows the client to write the firmware to the micro:bit's flash memory. Each packet contains 16 bytes of data and the offset at which to write it. This offset is used with the currently selected region's start address to determine the datas location in flash.
 
 The characteristic supports `WRITE_WITHOUT_RESPONSE` and the minimum connection interval is set to `7.5ms` to reduce transfer overheads.
@@ -66,3 +66,5 @@ The characteristic supports `WRITE_WITHOUT_RESPONSE` and the minimum connection 
 # Client Implementation
 An example implementation for Android can be found here [here](https://github.com/microbit-sam/microbit-android/blob/partial-flash/app/src/main/java/com/samsung/microbit/service/PartialFlashService.java).
 ![Partial Flashing Flowchart](pfs.png "Partial Flashing Flow")
+
+
