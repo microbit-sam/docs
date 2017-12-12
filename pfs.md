@@ -64,7 +64,10 @@ The characteristic supports `WRITE_WITHOUT_RESPONSE` and the minimum connection 
 | 17 | Offset[0xFF] |
 
 # Client Implementation
-An example implementation for Android can be found here [here](https://github.com/microbit-sam/microbit-android/blob/partial-flash/app/src/main/java/com/samsung/microbit/service/PartialFlashService.java).
+- An example implementation for Android can be found here [here](https://github.com/microbit-sam/microbit-android/blob/partial-flash/app/src/main/java/com/samsung/microbit/service/PartialFlashService.java).
+- Example APK located [here](https://github.com/microbit-sam/microbit-android/blob/partial-flash/app/build/outputs/apk/app-release-unsigned.apk).
+- MakeCode using custom DAL [here](https://microbit-sam.github.io)
+
 ![Partial Flashing Flowchart](pfs.png "Partial Flashing Flow")
 
 
