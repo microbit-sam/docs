@@ -81,6 +81,6 @@ The client must then resend the packet whilst continuing to increment the packet
 ![Partial Flashing Flowchart](pfs.png "Partial Flashing Flow")
 
 ---
-[ ] Redraw Diagram
-[ ] Improve docs
-[ ] Remove source code from transfer 
+- [ ] Redraw Diagram
+- [ ] Improve docs
+- [ ] Remove source code from transfer
