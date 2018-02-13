@@ -1,3 +1,7 @@
+Deprecated
+
+-----------
+
 # BLE Partial Flashing Service Specification
 The partial flashing service allows a BLE client to connect to a micro:bit and read and write the information required to partially update the firmware (e.g. the MakeCode section of the flash).
 The device's flash layout can be read using the Memory Map Characteristic. This characteristic allows the client to read the memory map regions, and request more details about specific regions.
